@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'crispy_forms',
-    "crispy_bootstrap5",
+    'crispy_bootstrap5',
+    'webpack_loader',
     'users',
     'books',
 ]
@@ -147,6 +148,13 @@ REST_FRAMEWORK = {
     ]
 }
 
+WEBPACK_LOADER = {
+  'DEFAULT': {
+    'BUNDLE_DIR_NAME': '/dist/',
+    'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json'),
+
+  }
+}
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
