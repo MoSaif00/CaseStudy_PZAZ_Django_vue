@@ -12,6 +12,8 @@ urlpatterns = [
             success_url = "/"
         ), name = "register"),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('api/', include('users.urls')),
+    path('api/', include('books.urls')),
     path('auth/', include('rest_framework.urls')),
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
